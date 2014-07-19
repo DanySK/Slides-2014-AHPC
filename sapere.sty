@@ -1,0 +1,126 @@
+
+\newcommand{\bnfs}{\,|\,}
+\newcommand{\lsa}[2]{#1\{#2\}}
+\newcommand{\pattern}[2]{#1[#2]}
+\newcommand{\ov}[1]{{\overline{#1}}}
+\newcommand{\ecolaw}[3]{#1\xmapsto{#2} #3}
+\newcommand{\transaction}[2]{\langle #1:#2\rangle}
+\newcommand{\apply}[2]{#1\rhd #2}
+\newcommand{\oprule}[4]{\langle #1::#2 \rangle #3 \longrightarrow #4}
+\newcommand{\opar}{\,|\,}
+\newcommand{\shell}[3]{(#1:#2)#3}
+\newcommand{\agent}[4]{\langle #1:(#2;#3)#4 \rangle}
+\newcommand{\inject}[2]{\texttt{inj(}#1,#2\texttt{)}}
+\newcommand{\observe}[2]{\texttt{obs(}#1,#2\texttt{)}}
+\newcommand{\update}[2]{\texttt{upd(}#1,#2\texttt{)}}
+\newcommand{\remove}[1]{\texttt{rem(}#1\texttt{)}}
+\newcommand{\zerod}{0_\mathcal{D}}
+\newcommand{\zerof}{0_\mathcal{F}}
+\newcommand{\timen}[1]{time(#1)}
+
+
+\newcommand{\oget}{\,\vdots\,}
+\newcommand{\loc}[1]{\mathit{loc}(#1)}
+\newcommand{\bonds}[1]{\mathit{b}(#1)}
+\newcommand{\terms}{\textsf{t}}
+\newcommand{\vars}{\textsf{x}}
+\newcommand{\varS}{\textsf{X}}
+\newcommand{\vari}[0]{\textsc{i}}
+\newcommand{\varid}[1]{#1.\textsc{d}}
+\newcommand{\vartime}{{\texttt{x\_time}}}
+\newcommand{\varloc}{{\texttt{x\_here}}}
+\newcommand{\varnbr}{{\texttt{x\_nbr}}}
+\newcommand{\neigh}[3]{#1 \stackrel{#2}{\rightsquigarrow}#3}
+\newcommand{\itheta}{\{\}}
+\newcommand{\tenv}[2]{\theta_\texttt{ctx}(#1,#2)}
+\newcommand{\ctx}[3]{\textit{ctx}(#1,#2,#3)}
+\newcommand{\skelf}{M_\mathcal{F}}
+\newcommand{\skeld}{\delta}
+
+\newcommand{\crule}[3]{\begin{array}{c} #2 \\ \hline #3 \end{array} & [\textrm{#1}]\\[15pt]}
+\newcommand{\ctworules}[6]{
+\begin{array}{@{\hspace{10pt}}cc@{\hspace{30pt}}c}
+\begin{array}{c} #5 \\ \hline #6 \end{array} & [\textrm{#4}] & \hfill
+\begin{array}{c} #2 \\ \hline #3 \end{array} 
+\end{array}
+& [\textrm{#1}]\\[15pt]}
+
+
+\newcommand{\plocation}{\texttt{\#location}}
+\newcommand{\hasany}{\texttt{has}}
+\newcommand{\hasnot}{\texttt{hasnot}}
+\newcommand{\hasone}{\texttt{=}}
+\newcommand{\assign}{\texttt{:=}}
+\newcommand{\extends}[1]{\texttt{extends~#1}}
+\newcommand{\clones}[1]{\texttt{clones~#1}}
+\newcommand{\annvar}[2]{\{#1:#2\}}
+
+
+\newcommand{\ssum}{+}
+\newcommand{\strn}[1]{--#1-->}
+\newcommand{\strninf}{--->}
+\newcommand{\spatt}[2]{#1:[#2]}
+\newcommand{\spattid}[1]{#1}
+\newcommand{\sseq}{;}
+\newcommand{\sclones}[1]{clones #1}
+\newcommand{\sextends}[1]{extends #1}
+\newcommand{\shasall}{=*}
+\newcommand{\shasany}{~\texttt{has}~}
+\newcommand{\shasnot}{~\texttt{has-not}~}
+\newcommand{\shasone}{\texttt{=}}
+\newcommand{\sis}{\texttt{=}}
+\newcommand{\svar}[1]{#1}
+\newcommand{\sid}[2]{?(#1[#2])}
+\newcommand{\svardesc}[1]{#1.D}
+\newcommand{\sannvar}[2]{?\{#1:#2\}}
+\newcommand{\slist}[1]{(#1)}
+\newcommand{\sdesc}[1]{[#1]}
+\newcommand{\sliteral}[1]{"#1"}
+\newcommand{\sprop}[1]{\sliteral{#1}}
+\newcommand{\erase}[1]{|#1|}
+
+\newcommand{\spar}[1]{\texttt{(}#1\texttt{)}}
+\newcommand{\snext}{\texttt{,}}
+
+%\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\ttt}[1]{\texttt{#1}}
+
+\newcommand{\tra}[3]{|#1|_{\stackrel{}{\ttt{#2}}}^{#3}}
+
+\newcommand{\shfilter}[1]{\texttt{FILTER(#1)}}
+\newcommand{\shbound}[1]{\texttt{BIND(#1)}}
+\newcommand{\shfilterne}[1]{\texttt{FLT-NE\{#1\}}}
+
+\newcommand{\shinsdata}[1]{\texttt{INSERT DATA\{#1\}}}
+\newcommand{\shdeldata}[1]{\texttt{DELETE DATA\{#1\}}}
+\newcommand{\shinsw}[2]{\texttt{INSERT$\,$\{#1\}$\,$WHERE$\,$\{#2\}}}
+\newcommand{\shdelw}[2]{\texttt{DELETE$\,$\{#1\}$\,$WHERE$\,$\{#2\}}}
+
+\newcommand{\impvar}[1]{\texttt{!}#1}
+\newcommand{\textends}[1]{\texttt{extends~}#1}
+\newcommand{\tclones}[1]{\texttt{clones~}#1}
+\newcommand{\ttrn}[1]{\texttt{-}\texttt{-}#1\texttt{-}\texttt{->}}
+
+\newcommand{\infax}[2]{
+  #2 & \textrm{[#1]} \\[10pt]
+}
+
+\newcommand{\infrule}[3]{
+  \begin{array}{c}
+    #2 \\[2pt] \hline \\[-9pt]  #3
+  \end{array} & \textrm{[#1]} \\[15pt]
+}
+
+\newcommand{\infdoublerule}[5]{
+  \begin{array}{cc}
+  \begin{array}{c}
+    #2 \\[2pt] \hline \\[-8pt]  #3
+  \end{array} & \begin{array}{c}
+    #4 \\[2pt] \hline \\[-8pt]  #5
+  \end{array}\end{array}  & \textrm{[#1]} \\[15pt]
+}
+
+\newcommand{\infdoubleax}[3]{
+  \begin{array}{cc}
+  #2\quad & #3  \end{array} & \textrm{[#1]} \\[5pt]
+}
